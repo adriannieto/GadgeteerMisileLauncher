@@ -51,7 +51,7 @@ namespace GadgeteerMisileLauncher
 
             // Get Joystick Position
             joystickPosition = joystick.GetPosition();
-            GT.Timer joystickTimer = new GT.Timer(60);
+            GT.Timer joystickTimer = new GT.Timer(50);
             joystickTimer.Tick += joystickTimer_Tick;
             joystickTimer.Start();
 
@@ -91,6 +91,7 @@ namespace GadgeteerMisileLauncher
                 {
                     launcherPod.MisileDO(MisileLauncher.MisileCommand.DOWN);
                 }
+                launcherPod.MisileDO(MisileLauncher.MisileCommand.STOP);
             }
 
 
